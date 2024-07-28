@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Zone</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container{
+      background-image: url(image.png);
+      
+      height: 100vh;
+      width: 100vw;
+      background-size:  100% 100% ;
+      background-repeat: no-repeat;
+      /* background-color: rgb(91, 20, 206); */
+      display: flex;
+      gap: 100px;
+      align-items: center;
+      justify-content: center;
+
+    }
+    .timebox{
+      color: #ffffff;
+      font-family: 'Courier New', Courier, monospace;
+      width: 250px;
+      height: 150px;
+      background-color: rgb(33, 30, 37);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+
+    }
+    p{
+      font-family: 27px;
+    }
+  </style>
+</head>
+<body>
+  <!-- india -->
+  <div class="container">
+    <div class="timebox">
+      <h1>India</h1>
+      <p id="indiantime">Time</p>
+    </div>
+
+    <!-- paris -->
+    <div class="timebox">
+      <h1>Paris</h1>
+      <p id="paristime"></p>
+    </div>
+    <!-- New york -->
+    <div class="timebox">
+      <h1>New york</h1>
+      <p id="Newyorktime"></p>
+    </div>
+    <!-- Canada -->
+    <div class="timebox">
+      <h1>Canada</h1>
+      <p id="Canadatime"></p>
+    </div>
+
+  </div>
+
+  <script>
+    let d=document.getElementById('indiantime');
+    function indianTime(){
+      d.innerHTML=new Date().toLocaleString('en-US',{timeZone:'Asia/kolkata',timeStyle:'medium',hourCycle:'h12'})
+    }
+
+
+    let c=document.getElementById('paristime');
+    function paristime(){
+      d.innerHTML=new Date().toLocaleString('en-US',{timeZone:'Eirope/Peris',timeStyle:'medium',hourCycle:'h24'})
+    }
+
+
+    let a=document.getElementById('Newyorktime');
+    function Newyorktime(){
+      d.innerHTML=new Date().toLocaleString('en-US',{timeZone:'America/New_York',timeStyle:'medium',hourCycle:'h24'})
+    }
+
+
+
+    let b=document.getElementById('Canadatime');
+    function Canadatime(){
+      d.innerHTML=new Date().toLocaleString('en-US',{timeZone:'Ottawa/Canada',timeStyle:'medium',hourCycle:'h24'})
+    }
+
+
+
+    setInterval(indianTime,1000)
+  </script>
+</body>
+</html>

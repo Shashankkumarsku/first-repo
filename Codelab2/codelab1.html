@@ -1,0 +1,76 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        transition: 0.5s;
+      }
+      .main {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      select {
+        padding: 10px 30px;
+        outline: none;
+        border: 1px solid gray;
+      }
+
+      button {
+        padding: 10px 10px;
+        border: none;
+        outline: none;
+        background-color: green;
+        color: white;
+        cursor: pointer;
+        font-size: 1.1rem;
+      }
+
+      button:active {
+        transform: scale(0.9);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="selected-box">
+        <span>==></span>
+        <select name="cars" id="days">
+          <option id="monsoon" value="Monsoon">Monsoon</option>
+          <option id="summer" value="Summer">Summer</option>
+          <option id="winter" value="Winter">Winter</option>
+        </select>
+        <button onclick="demo()">Show Message and image</button>
+      </div>
+      <p id="msgShow"></p>
+      <img src="" />
+    </div>
+
+    <script>
+      
+
+      function demo() {
+        let days = document.getElementById("days").value;
+        console.log(days);
+        if (days == "Monsoon") {
+          document.getElementById('msgShow').innerHTML='Monsoon'
+        } else if (days == "Summer") {
+           document.getElementById('msgShow').innerHTML='Summer'      
+        } else if (days == "Winter") {
+          document.getElementById('msgShow').innerHTML='Winter'         
+        }
+      }
+    </script>
+  </body>
+</html>

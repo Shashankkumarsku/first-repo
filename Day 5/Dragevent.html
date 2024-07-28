@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #dragElement{
+      width: 100px;
+      height: 100px;
+      background-color: lightgreen;
+      border: 2px solid black;
+      text-align: center;
+      padding-top: 50px;
+    }
+    #dragZone{
+      width: 200px;
+      height: 100px;
+      background-color: lightcoral;
+      border: 2px solid black;
+      text-align: center;
+      padding-top: 50px;
+      margin-top: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Drag Event</h1>
+  <div id="dragElement" draggable="true">Drag Me</div>
+  <div id="dragZone">Drag Here</div>
+
+  <script>
+
+  //.......................................Drag Start.................................
+  document.getElementById('dragElement').addEventListener("dragstart", function (event){
+    event.dataTransfer.setData("text", event.target.id);
+  })
+       
+    
+
+  //........................................Drop Event.................................
+  document.getElementById('dropZone').addEventListener("dragover", function (event){
+      event.preventDefault();
+      
+  })
+    
+
+  //.........................DROP.........................................
+  document.getElementById('dropZone').addEventListener('drop',function(e){
+    event.preventDefault();
+    var data=event.dataTransfer.getData('text');
+    var dragElement=document.getElementById(data);
+    event.target.appendChild(draggedElement);
+  })
+    
+
+  </script>
+</body>
+</html>

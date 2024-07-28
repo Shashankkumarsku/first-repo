@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Number</title>
+</head>
+<body>
+<!-- .......................HTML START........................................................ -->
+  <h1>Add Number</h1>
+
+<div class="number_one">
+  <input type="number" placeholder="Enter first number" id="num1">
+</div>
+<br>
+<div class="number_two">
+  <input type="number" placeholder="Enter second number" id="num2">
+</div>
+<br>
+<p id="answer"></p>
+<button  onclick="addnum()">Add Number</button>
+
+<!-- .................HTML END.......................................... -->
+ <!-- .......................JAVASCRIPT START......................................... -->
+<script>
+  const addnum=()=>{
+    let num1=parseInt(document.getElementById('num1').value)
+    console.log(typeof(num1));
+    let num2=parseInt(document.getElementById('num2').value);
+    console.log(num1,num2);
+    let sum=num1+num2;
+    document.getElementById('answer').innerHTML=`the answer is ${sum}`;
+
+
+// <!-- .......................JAVASCRIPT START......................................... -->
+}
+</script>
+</body>
+</html>

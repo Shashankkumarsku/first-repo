@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Key Event</title>
+</head>
+<body>
+  <h1>Key Event in JAVASCRIPT</h1>
+  <div id="form">
+    <p>On Key Down</p>
+    <input type="text" id="down">
+
+    <p>On Key Up</p>
+    <input type="text" id="up">
+
+    <p>On Key press</p>
+    <input type="text" id="press">
+
+
+  </div>
+
+
+  <script>
+    let keyevent1=document.getElementById('down');
+    keyevent1.addEventListener('keydown',function show(){
+      // alert(this.value);  //(Script ke liye)
+      document.getElementById('form').style.backgroundColor=this.value;
+    })
+
+
+    let keyevent2=document.getElementById('up');
+    keyevent2.addEventListener('keyup',function show(){
+      // alert(this.value);    //(Script ke liye)
+      document.getElementById('form').style.backgroundColor=this.value;
+    })
+
+
+    let keyevent3=document.getElementById('press');
+    keyevent3.addEventListener('keypress',function show(){
+      // alert(this.value);    //(Script ke liye)
+      document.getElementById('form').style.backgroundColor=this.value;   
+    }) 
+  </script>
+  
+</body>
+</html>

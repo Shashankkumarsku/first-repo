@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Method</title>
+</head>
+<body>
+  <h1>Array Method</h1>
+  <p id="demo"></p>
+
+  <script>
+
+    //.......................Area Of Circle nikalna............................//
+    //......................Method 1...........................................//
+    ///.......for loop method...............//
+
+    // let circle=[10,20,30];
+    
+    // let pi=3.14;
+    // let areas=[];
+    // let area=0;
+    // for(let i=0;i<circle.length;i++){
+    //   area=pi*circle[i]*circle[i];
+      
+    //   areas.push(area);
+    // }
+    // document.getElementById('demo').
+    // innerHTML=area;
+    
+
+    //..............................Method 2...................................//
+//....................Map Method...........//
+    // let circle=[10,20,30,40,45];
+    // let pi=3.14
+    // let areas=circle.map(radius=>{
+    //   return radius*radius*pi;
+    // })
+    // document.getElementById('demo').innerHTML=areas;
+
+
+    ///......................Loop Method Or Map Method me kon acha hai........................///
+    ///................................Map Method Acha Hai.....................................///
+
+
+    // let circle=[10,20,30];
+    
+    // let pi=3.14;
+    // const forLoopTime1=performance.now();
+    // let areas=[];
+    // let area=0;
+    // for(let i=0;i<circle.length;i++){
+    //   area=pi*circle[i]*circle[i];
+      
+    //   areas.push(area);
+    //   let data=78978*6548*56465*454;
+    // }
+    // document.getElementById('demo').innerHTML=areas;
+    // const forLoopTime2=performance.now();
+    // console.log(forLoopTime2-forLoopTime1);
+    // const mapTime3=performance.now();
+    // let areas1=circle.map((r)=>{
+    //   let data=78978*6548*56465*454*45464646;
+    //   console.log(data);
+    //   return r*r*pi;
+    // })
+
+    // document.getElementById('demo').innerHTML=areas1;
+    // const mapTime4=performance.now();
+    // console.log(mapTime4-mapTime3);
+
+
+    //New Topic....................//
+
+
+    // const marks=[99,78,67,99,95,89];
+    const marks=[99,78,67,99,95,89,100,1,11];
+    console.log(marks.sort((a, b) => a-b));
+    let highrstMarks=marks.filter(m=>{
+    // let highrstMarks=marks.map(m=>{
+
+      return m>90;
+    })
+    console.log(highrstMarks);
+
+
+    
+    
+
+  </script>
+</body>
+</html>

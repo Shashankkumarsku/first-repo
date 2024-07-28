@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- <h1>Events in Javascript </h1> -->
+   <h1>mouseover And mouseout</h1>
+  <!-- <p id="demo">This is a pargraph </p>
+  <p id="data"></p>
+  <div class="perfoemevents">Hover over me </div> -->
+  <div id="data">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid quasi excepturi inventore in nesciunt illum officia totam molestiae quidem saepe quibusdam ullam libero assumenda dolorum, hic nihil? Laboriosam, debitis impedit.</div>
+
+  <!-- <div class="perfoemevents" onmouseover="show">Hover over me </div> -->
+  <!-- <button onclick="show()">show</button> -->
+  <!-- <button id="btn" >show</button> -->
+
+  <script>
+    // const data=document.getElementById('data');
+    // let btn=document.getElementById('btn');
+    // const perfoemevents=document.getElementById('perfoemevents')
+    // perfoemevents.addEventListener('mousehover',show)
+    // console.log(data,btn);
+    // function show(){
+    
+    //   data.innerHTML='<h2>you have clicked on button'
+    // }
+
+
+
+  //   console.log(data);
+    // function show(){
+    //   //console.log('Hello');
+    //   data.innerHTML='<h2>you have clicked on button'
+  //  }
+
+  // ........Mouseout And Mouseover Function Start.........  
+
+
+  let data=document.getElementById('data');
+  function bgred(){
+    data.style.backgroundColor="red";
+  }
+
+  function bggreen(){
+    data.style.backgroundColor="green";
+  }
+
+  data.addEventListener('mouseover' ,bgred);
+
+  data.addEventListener('mouseout' ,bggreen);
+
+//........Mouseout And Mouseover Function End.........
+
+    // btn.addEventListener('click',()=>{
+    //   console.log('I am working with addevent listener')
+    // })
+
+  </script>
+</body>
+</html>

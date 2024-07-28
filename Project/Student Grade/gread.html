@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade System | JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        main {
+            width: 350px;
+            min-height: 80vh;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            padding: 2rem;
+        }
+
+        div {
+            width: 300px;
+            padding-bottom: 1rem;
+        }
+
+        input {
+            width: 100%;
+            padding-block: 0.5rem;
+            border: 2px solid gray;
+            border-radius: 5px;
+        }
+
+        button {
+            width:  102%;
+            padding-block: 0.5rem;
+            border: 2px solid cornflowerblue;
+            border-radius: 5px;
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Grade System</h1>
+
+        <h2>Student Details</h2>
+        <div>
+            <label for="s-name">Student Name:</label><br>
+            <input type="text" id="name" placeholder="Enter Name">
+        </div>
+
+        <div>
+            <label for="s-grade">Student Grade:</label><br>
+            <input type="number" id="grade" placeholder="Enter Grade">
+        </div>
+        <br>
+
+        <div>
+            <button onclick="addGrade()">Add Grade</button>
+        </div>
+        <br>
+
+        <div>
+            <button onclick="calculate()">Calculate Average</button>
+        </div>
+
+        <h2>List of Students</h2>
+        <div>
+            <button onclick="printStudents()">List of Students</button>
+        </div>
+
+    </main>
+
+    <script>
+        let grades = [];
+        let sum = 0;
+
+        function addGrade() {
+            let sName = document.getElementById("name").value;
+            let sGrade = parseInt(document.getElementById("grade").value);
+
+            if (sName && !isNaN(sGrade)) {
+                grades.push([sName, sGrade]);
+                document.getElementById("name").value = "";
+                document.getElementById("grade").value = "";
+                console.log(grades);
+            } else {
+                alert("Please enter both name and grade.");
+            }
+        }
+
+        function calculate() {
+            sum = 0;
+
+            for (let i = 0; i < grades.length; i++) {
+                sum += grades[i][1];
+            }
+
+            let average = sum / (grades.length);
+            console.log("Average Grade: " + average);
+        }
+
+        function printStudents() {
+            for (let i = 0; i < grades.length; i++) {
+                console.log("Student Name: " + grades[i][0] + ", Grade: " + grades[i][1]);
+            }
+        }
+    </script>
+</body>
+</html>

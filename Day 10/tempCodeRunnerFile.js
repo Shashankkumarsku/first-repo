@@ -1,0 +1,1 @@
+let fruits=str.slice(4,10);

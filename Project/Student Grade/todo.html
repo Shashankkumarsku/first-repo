@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        body,ul{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            background-color: #f4f4f4;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 5px 8px rgba(0,0,0,0.4);
+        }
+        h1{
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .task_form{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        #taskInput{
+            /* width: 300px; */
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button{
+            padding: 10px 20px;
+            background-color: palevioletred;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(168, 38, 81);
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+        li{
+            font-size: 18px;
+            margin-bottom: 10px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 5px 8px rgba(0,0,0,0.4);
+        }
+        li:hover{
+            background-color: #f0f0f0;
+        }
+    </style>
+   
+</head>
+<body>
+  <div class="container">
+    <h1>Task Manager</h1>
+    <div class="task_form">
+        <input type="text" id="taskInput" placeholder="Add todo task">
+        <button onclick="addTask()">Add Task</button>
+    </div>
+    <ul id="taskList">
+
+    </ul>
+  </div>
+  <script>
+    let tasks=[];
+    function addTask(){
+        const taskInput=document.getElementById('taskInput');
+        const taskText=taskInput.value;
+        if(taskText!==""){
+            tasks.push(taskText);
+            taskInput.value='';
+            console.log(tasks);
+        }
+        displayTodo();
+    }
+    function displayTodo(){
+        const taskList=document.getElementById('taskList');
+        taskList.innerHTML='';
+        for(let i=0;i<tasks.length;i++){
+            const taskItem=document.createElement('li');
+            taskItem.textContent=tasks[i];
+            taskList.appendChild(taskItem);
+        }
+
+
+    }
+  </script>
+</body>
+</html>

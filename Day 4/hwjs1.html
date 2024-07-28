@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Area of Circle</title>
+
+  <style type="text/css">
+    #container {
+      background-color: lightgray;
+      width: 30%;
+      padding: 10px;
+    }
+  </style>
+
+</head>
+<body>
+  <div id="container">
+    <lebel>Redius:</lebel> <br>
+    <input type="text" id="txtRadius" value="0"/> <br><br>
+
+    <input type="button" value="Calculate" onclick="Calculate()"/>
+    <input type="button" value="Reset" onclick="reset()"/> <br><br>
+
+    <span id="spnresult">Area of circle= 0</span>
+
+  </div>
+  <script type="text/javascript">
+    function Calculate() {
+      //alert(typeof Number( document.getElementById("txtRadius").value ) );
+      var r = Number( document.getElementById("txtRadius").value ) ;
+      var areaofcircle = Math.PI * r * r;
+      //alert( areaofcircle.toFixed(2) );
+      document.getElementById("spnresult").innerHTML = "Area of circle=" + areaofcircle.toFixed(2);
+
+
+      function reset() {
+        document.getElementById("txtRadius").value= "0";
+        document.getElementById("spnresult").innerHTML = "Area of circle=0";
+      }
+
+
+    }
+  </script>
+
+
+
+  <!-- <script>
+    var p,r,a;
+    p=3.14;
+    r=prompt("Please Enter Radius Of Circle")
+    a=p*r*r
+    //alert("this is the area of circle=" + a);
+    document.write("This is the area of circle=" + a);
+  </script> -->
+</body>
+</html>

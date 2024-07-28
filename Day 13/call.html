@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Call</title>
+</head>
+<body>
+  <h1>CallBack in JS</h1>
+  <div id="demo">
+
+  </div>
+  <button id="btn">Click</button>
+  <script>
+    ///................Call Back.......................
+    // let btn=document.getElementById('btn');
+    // btn.addEventListener('click',handleClick);
+    // function handleClick(){
+    //   console.log("clicked")
+    //}
+///..............Auto Call....................
+    let btn=document.getElementById('btn');
+    btn.addEventListener('click',handleClick());
+    function handleClick(){
+      console.log("clicked")
+    }
+  </script>
+</body>
+</html>

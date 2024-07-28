@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Events - 1 (Hide And Show</h1>
+  <p id="data">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut numquam laudantium iusto voluptates facere sint, pariatur officiis ab dignissimos quisquam consequuntur earum sapiente assumenda doloremque, veniam ipsa molestiae? Fugiat, sunt.</p>
+  <button onclick="toggle()">Show/Hide</button>
+  <div id="touchdiv">Touch Div</div>
+
+  <script>
+
+// .......................Show Hide Button End...................
+    let data=document.getElementById('data');
+    function toggle(){
+      if(data.style.display!='none'){
+        data.style.display='none'
+
+      }
+
+      else{
+        data.style.display='block'
+
+      }
+    }
+// .......................Show Hide Button End...................
+// ...........douch divice Start.........................
+    const touchdiv=document.getElementById('touchdiv');
+    touchdiv.addEventListener('touchstart',()=>{
+      touchdiv.style.backgroundColor='red' 
+    })
+// ...........douch divice end.........................    
+  
+  </script>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regex</title>
+</head>
+<body>
+  <h1>Regular Express In JS</h1>
+  <p id="demo"></p>
+  <script>
+    //Basic Example
+    // let text="Hello Student";
+    // //const pattern=new RegExp("Students");
+    // let pattern= /Student/;
+    // let result=text.match(pattern);
+    // document.getElementById('demo').innerHTML=result
+
+    //attributes/modifiers-----i,g,n
+    // let text="Hello Student students";
+    // //const pattern=new RegExp("Students");
+    // let pattern= /Student/ig;
+    // let result=text.match(pattern);
+    // document.getElementById('demo').innerHTML=result
+
+
+    ///////m/////
+    // let text = `IS this 
+    // all there
+    // is
+    // is`;
+    // let pattern= /^is/ig;
+    // let result=text.match(pattern);
+    // document.getElementById('demo').innerHTML=result
+
+
+//     let text = `IS this 
+// all there
+// is
+// is`;
+//     let pattern= /^is/igm;
+//     let result=text.match(pattern);
+//     document.getElementById('demo').innerHTML=result
+
+
+    //-------------Groups--------------------//
+    //****************[abc]*******************//
+    
+
+
+    // let text="Is This But All This Is It";
+    // //const pattern=new RegExp("Students");
+    // // let pattern= /[A-Z]/ig;
+    // let pattern= /[A-Z]/i;
+    // let result=text.match(pattern);
+    // document.getElementById('demo').innerHTML=result
+
+
+//****************[^abc]*******************//
+    // let text="Is This But All This Is It";
+    // //const pattern=new RegExp("Students");
+    // // let pattern= /[A-Z]/ig;
+    // let pattern= /[text]/g;
+    // // let result=text.match(pattern);
+    // let result=pattern.test(text);
+    // document.getElementById('demo').innerHTML=result
+
+
+//  ********************[0-9]***********************  
+     
+    // let text="1768688";
+    // // let pattern= /[0-4]/g;
+    // let pattern= /[^0-4]/g;
+    // let result=text.match(pattern);
+    // document.getElementById('demo').innerHTML=result
+
+
+
+    //////////////Meta Characters////////////////////
+
+/////////\w-----match a-z,A-z,0-9
+    // let text="Give_1000%";
+    // // let pattern= /[0-4]/g;
+    // let pattern= /\w/g;
+    // let result=text.match(pattern);
+    // document.getElementById('demo').innerHTML=result
+
+
+/////////\w-----match !@#$%^&*()_+ etc ko match karega
+
+    // let text="Give_100#$%^&*(*|\\\\\=)%";
+    // // let pattern= /[0-4]/g;
+    // let pattern= /\W/g;
+    // let result=text.match(pattern);
+    // document.getElementById('demo').innerHTML=result
+
+    /////////\d*******************
+
+/////////\d-----Number ko match karega
+    // let text="Give_100#$%^02152";
+    // // let pattern= /[0-4]/g;
+    // let pattern= /\d/g;
+    // let result=text.match(pattern);
+    // document.getElementById('demo').innerHTML=result
+
+/////////\D-----{match digit + Spiceal Charctor ko match karega//////
+    // let text="Give_100#$%^02152";
+    // // let pattern= /[0-4]/g;
+    // let pattern= /\d/g;
+    // let result=text.match(pattern);
+    // document.getElementById('demo').innerHTML=result
+
+
+    //*********************Quntifiers******************
+    //**********(+)***************
+
+    // let text='helloooo wor 111 ld!He lllo  coooollege';
+    // let pattern=/o+/g;
+    // let result=text.match(pattern);
+    // document.getElementById('demo').innerHTML=result
+
+
+    // let text='helloooo wor ld!He lllo  coooollege';
+    // let pattern=/o*/g;
+    // let result=text.match(pattern);
+    // document.getElementById('demo').innerHTML=result
+
+    // let text='helloooo howor ld!He lllo  coooollege';
+    // let pattern=/ho+/gi;
+    // let result=text.match(pattern);
+    // document.getElementById('demo').innerHTML=result
+
+    // let text='hooelloooo howor ld!He lllo  coooollege';
+    // let pattern=/ho*/gi;
+    // let result=text.match(pattern);
+    // document.getElementById('demo').innerHTML=result
+
+
+    // let text='hooelloooo hoeor ld!Hoe lllhoee  coooollege';
+    // let pattern=/ho+e/gi;
+    // let result=text.match(pattern);
+    // document.getElementById('demo').innerHTML=result
+
+    //****************(?)********************//
+    // let text='1,10,100 or 10000000?';
+
+    // // let pattern=/1000?/g;
+    // let pattern=/10?0?/g;
+    // // let pattern=/10?00?0?/g;
+    // let result=text.match(pattern);
+    // document.getElementById('demo').innerHTML=result;
+
+
+
+
+    ////{x,y}
+    // let text='1,10,100 or 10000000?';
+    // let pattern=/\d{3,5}/g;
+    // let result=text.match(pattern);
+    // document.getElementById('demo').innerHTML=result;
+
+
+// // ***********{x,}**********
+var txt='1000000,10000000 or 100000000000000000000000?';
+var pattern=/\d{3,}/g;
+var result=txt.match(pattern);
+document.getElementById('demo').innerHTML=result;
+
+  </script>
+</body>
+</html>
+
+<!-- Gmail banane ke liye use karte hai website regex101.com  -->

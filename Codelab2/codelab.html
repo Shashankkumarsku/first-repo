@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasonal Message and Image</title>
+    <style>
+        .container {
+            height: 200px;
+            width: 500px;
+            background-color: aquamarine;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 20px;
+            padding-left: 60px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        select {
+            font-size: 16px;
+            padding: 5px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Seasonal Message</h1>
+        <select name="day" id="day">
+            <option value="summer">Summer</option>
+            <option value="winter">Winter</option>
+            <option value="raining">Rain</option>
+            <option value="Spring season">Spring</option>
+        </select>
+        <button onclick="clickonbutton()">Show Message and Image</button>
+        <p id="seasonMessage"></p>
+    </div>
+
+    <script>
+        function clickonbutton() {
+            const day = document.getElementById('day').value;
+            const messageElement = document.getElementById('seasonMessage');
+            let message = '';
+
+            if (day == 'summer') {
+                message = 'Summer is here! Enjoy the sun.';
+                messageElement.style.color = 'Orange';
+            } else if (day == 'winter') {
+                message = 'Winter has come! Stay warm.';
+                messageElement.style.color = 'skyblue';
+            } else if (day == 'raining') {
+                message = 'It\'s raining! Don\'t forget your umbrella.';
+                messageElement.style.color = 'blue';
+                
+            } else if (day == 'Spring') {
+                message = 'Spring is come! The king of Season.';
+                messageElement.style.color = 'blue';
+            } 
+
+            messageElement.innerText = message;
+        }
+    </script>
+</body>
+</html>
